@@ -17,6 +17,7 @@
   };
 
   function clampNum(v, lo, hi, dflt) {
+    if (v === null || v === undefined || String(v).trim() === '') return dflt; // Number(null) is 0, not "missing"
     const n = Number(v);
     if (!Number.isFinite(n)) return dflt;
     return Math.max(lo, Math.min(hi, n));

@@ -103,6 +103,13 @@ def main():
         board = context.new_page()
         board.goto(f"{base}/leaderboard.html")
 
+        # Defaults must apply when no URL options are given (the real booth URL).
+        page.goto(f"{base}/index.html?test=1")
+        cfg = page.evaluate("window.__SKYSHOT__.config()")
+        check(cfg["roundSeconds"] == 45 and cfg["resultsIdleSeconds"] == 25 and cfg["returnToAttractSeconds"] == 9,
+              f"default config wrong without URL options: {cfg}")
+        page.goto(url)
+
         check(wait_mode(page, "attract", 5), "game did not boot into attract mode")
         page.bring_to_front()
         page.screenshot(path=str(SCREENS / "01_attract.png"))
