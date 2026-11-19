@@ -30,7 +30,7 @@ SKYSHOT is a 45-second aim trainer built for a live booth. Glowing orbs appear a
 No build step and no dependencies.
 
 ```bash
-git clone <this-repo-url> skyshot && cd skyshot
+git clone https://github.com/emanalshazly/skyshot && cd skyshot
 python3 -m http.server 8000        # any static server works, and it runs fully offline
 ```
 
@@ -39,7 +39,7 @@ python3 -m http.server 8000        # any static server works, and it runs fully 
 
 Opening `index.html` straight from disk also works in Chrome. The local server is recommended because it keeps the monitor's live sync instant across windows.
 
-**Live demo:** `https://<your-github-user>.github.io/skyshot/` (GitHub Pages, static)
+**Live demo:** https://emanalshazly.github.io/skyshot/ (leaderboard monitor: https://emanalshazly.github.io/skyshot/leaderboard.html)
 
 ## Booth operator controls
 
