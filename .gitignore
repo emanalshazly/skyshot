@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+tests/screens/
+.DS_Store
+# .idea/ and .junie/ are committed on purpose (the hackathon encourages it)

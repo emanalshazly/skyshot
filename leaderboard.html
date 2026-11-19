@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SKYSHOT — Today's Leaderboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="board">
+  <h1>SKYSHOT</h1>
+  <div class="sub" id="sub">TODAY'S TOP 10</div>
+  <table id="table" aria-live="polite"></table>
+  <div class="foot" id="foot"></div>
+
+  <script src="js/store.js"></script>
+  <script>
+    (function () {
+      'use strict';
+      const table = document.getElementById('table');
+      const sub = document.getElementById('sub');
+      const foot = document.getElementById('foot');
+      let lastSig = '';
+      let lastTop = new Set();
+
+      function esc(s) {
+        return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+      }
+
+      function render() {
+        const list = SkyStore.top(10);
+        const best0 = SkyStore.allTimeBest();
+        const sig = JSON.stringify([list.map(e => [e.name, e.score, e.at]), best0 && best0.at, SkyStore.dayKey()]);
+        if (sig === lastSig) return;
+        lastSig = sig;
+
+        const day = SkyStore.dayKey();
+        sub.textContent = `TODAY'S TOP 10  •  ${day}`;
+        if (!list.length) {
+          table.innerHTML = '<tr><td class="empty">No scores yet — be the first pilot!</td></tr>';
+        } else {
+          const nowTop = new Set(list.map(e => e.at));
+          table.innerHTML = list.map((e, i) => {
+            const cls = [i === 0 ? 'first' : '', lastTop.size && !lastTop.has(e.at) ? 'fresh' : ''].join(' ').trim();
+            return `<tr class="${cls}"><td class="rank">${i + 1}</td><td class="name">${esc(e.name)}</td>` +
+                   `<td class="meta">${esc(e.accuracy)}% acc · ${e.reaction ? esc(e.reaction) + ' ms' : '—'}</td>` +
+                   `<td class="score">${esc(e.score)}</td></tr>`;
+          }).join('');
+          lastTop = nowTop;
+        }
+        const best = SkyStore.allTimeBest();
+        foot.textContent = best ? `All-time best: ${best.name} — ${best.score}   •   Stored on this machine, works offline` : 'Stored on this machine, works offline';
+      }
+
+      SkyStore.subscribe(render);
+      // Fallback: also poll, since some browsers block cross-window events on file:// pages.
+      setInterval(render, 2000);
+      render();
+    })();
+  </script>
+</body>
+</html>

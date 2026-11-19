@@ -1,0 +1,52 @@
+{
+  "rounds": 3,
+  "round_seconds": 45,
+  "offline": "all non-local requests blocked",
+  "stored_runs": 3,
+  "frame_ms_last_600": {
+    "samples": 600,
+    "p50": 16.7,
+    "p95": 16.7,
+    "max": 16.8
+  },
+  "heap_bytes_start": 2560396,
+  "heap_bytes_end": 5811713,
+  "browser_errors": [],
+  "failures": [],
+  "per_round": [
+    {
+      "round": 1,
+      "score": 17178,
+      "accuracy": 72,
+      "reaction": 279,
+      "combo": 10,
+      "rank": 1,
+      "exit": "save_click",
+      "click_latency_ms_p95": 6.3,
+      "frame_p95_ms": 16.8
+    },
+    {
+      "round": 2,
+      "score": 18743,
+      "accuracy": 82,
+      "reaction": 247,
+      "combo": 14,
+      "rank": 1,
+      "exit": "idle_autosave",
+      "click_latency_ms_p95": 4.6,
+      "frame_p95_ms": 16.8
+    },
+    {
+      "round": 3,
+      "score": 13445,
+      "accuracy": 58,
+      "reaction": 384,
+      "combo": 9,
+      "rank": 3,
+      "exit": "play_again",
+      "click_latency_ms_p95": 6.2,
+      "frame_p95_ms": 16.7
+    }
+  ],
+  "passed": true
+}

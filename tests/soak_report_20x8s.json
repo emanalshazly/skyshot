@@ -1,0 +1,239 @@
+{
+  "rounds": 20,
+  "round_seconds": 8,
+  "offline": "all non-local requests blocked",
+  "stored_runs": 20,
+  "frame_ms_last_600": {
+    "samples": 600,
+    "p50": 16.7,
+    "p95": 16.8,
+    "max": 16.8
+  },
+  "heap_bytes_start": 2339210,
+  "heap_bytes_end": 2351199,
+  "browser_errors": [],
+  "failures": [],
+  "per_round": [
+    {
+      "round": 1,
+      "score": 3710,
+      "accuracy": 75,
+      "reaction": 253,
+      "combo": 8,
+      "rank": 1,
+      "exit": "save_click",
+      "click_latency_ms_p95": 5.2,
+      "frame_p95_ms": 16.8
+    },
+    {
+      "round": 2,
+      "score": 3108,
+      "accuracy": 86,
+      "reaction": 182,
+      "combo": 11,
+      "rank": 2,
+      "exit": "idle_autosave",
+      "click_latency_ms_p95": 2.8,
+      "frame_p95_ms": 16.8
+    },
+    {
+      "round": 3,
+      "score": 2835,
+      "accuracy": 72,
+      "reaction": 297,
+      "combo": 5,
+      "rank": 3,
+      "exit": "play_again",
+      "click_latency_ms_p95": 3.4,
+      "frame_p95_ms": 16.8
+    },
+    {
+      "round": 4,
+      "score": 3329,
+      "accuracy": 92,
+      "reaction": 272,
+      "combo": 9,
+      "rank": 2,
+      "exit": "save_click",
+      "click_latency_ms_p95": 4.7,
+      "frame_p95_ms": 16.8
+    },
+    {
+      "round": 5,
+      "score": 2439,
+      "accuracy": 72,
+      "reaction": 259,
+      "combo": 5,
+      "rank": 5,
+      "exit": "idle_autosave",
+      "click_latency_ms_p95": 4.1,
+      "frame_p95_ms": 16.7
+    },
+    {
+      "round": 6,
+      "score": 3707,
+      "accuracy": 100,
+      "reaction": 144,
+      "combo": 13,
+      "rank": 2,
+      "exit": "play_again",
+      "click_latency_ms_p95": 5.2,
+      "frame_p95_ms": 16.7
+    },
+    {
+      "round": 7,
+      "score": 3229,
+      "accuracy": 92,
+      "reaction": 267,
+      "combo": 9,
+      "rank": 4,
+      "exit": "save_click",
+      "click_latency_ms_p95": 2.5,
+      "frame_p95_ms": 16.7
+    },
+    {
+      "round": 8,
+      "score": 3346,
+      "accuracy": 80,
+      "reaction": 275,
+      "combo": 6,
+      "rank": 3,
+      "exit": "idle_autosave",
+      "click_latency_ms_p95": 3.2,
+      "frame_p95_ms": 16.7
+    },
+    {
+      "round": 9,
+      "score": 2860,
+      "accuracy": 41,
+      "reaction": 485,
+      "combo": 3,
+      "rank": 7,
+      "exit": "play_again",
+      "click_latency_ms_p95": 3.9,
+      "frame_p95_ms": 16.8
+    },
+    {
+      "round": 10,
+      "score": 3884,
+      "accuracy": 93,
+      "reaction": 192,
+      "combo": 8,
+      "rank": 1,
+      "exit": "save_click",
+      "click_latency_ms_p95": 2.3,
+      "frame_p95_ms": 16.8
+    },
+    {
+      "round": 11,
+      "score": 1876,
+      "accuracy": 60,
+      "reaction": 524,
+      "combo": 2,
+      "rank": 11,
+      "exit": "idle_autosave",
+      "click_latency_ms_p95": 2.6,
+      "frame_p95_ms": 16.7
+    },
+    {
+      "round": 12,
+      "score": 2187,
+      "accuracy": 67,
+      "reaction": 489,
+      "combo": 5,
+      "rank": 11,
+      "exit": "play_again",
+      "click_latency_ms_p95": 4.7,
+      "frame_p95_ms": 16.7
+    },
+    {
+      "round": 13,
+      "score": 4037,
+      "accuracy": 100,
+      "reaction": 199,
+      "combo": 13,
+      "rank": 1,
+      "exit": "save_click",
+      "click_latency_ms_p95": 4.9,
+      "frame_p95_ms": 16.8
+    },
+    {
+      "round": 14,
+      "score": 2225,
+      "accuracy": 58,
+      "reaction": 371,
+      "combo": 2,
+      "rank": 12,
+      "exit": "idle_autosave",
+      "click_latency_ms_p95": 4.4,
+      "frame_p95_ms": 16.8
+    },
+    {
+      "round": 15,
+      "score": 2479,
+      "accuracy": 81,
+      "reaction": 263,
+      "combo": 5,
+      "rank": 11,
+      "exit": "play_again",
+      "click_latency_ms_p95": 3.4,
+      "frame_p95_ms": 16.7
+    },
+    {
+      "round": 16,
+      "score": 2130,
+      "accuracy": 77,
+      "reaction": 207,
+      "combo": 4,
+      "rank": 15,
+      "exit": "save_click",
+      "click_latency_ms_p95": 5.2,
+      "frame_p95_ms": 16.8
+    },
+    {
+      "round": 17,
+      "score": 3201,
+      "accuracy": 93,
+      "reaction": 241,
+      "combo": 8,
+      "rank": 8,
+      "exit": "idle_autosave",
+      "click_latency_ms_p95": 5.9,
+      "frame_p95_ms": 16.7
+    },
+    {
+      "round": 18,
+      "score": 2306,
+      "accuracy": 46,
+      "reaction": 594,
+      "combo": 4,
+      "rank": 14,
+      "exit": "play_again",
+      "click_latency_ms_p95": 4.9,
+      "frame_p95_ms": 16.7
+    },
+    {
+      "round": 19,
+      "score": 3839,
+      "accuracy": 87,
+      "reaction": 132,
+      "combo": 8,
+      "rank": 3,
+      "exit": "save_click",
+      "click_latency_ms_p95": 4.6,
+      "frame_p95_ms": 16.7
+    },
+    {
+      "round": 20,
+      "score": 3167,
+      "accuracy": 86,
+      "reaction": 176,
+      "combo": 5,
+      "rank": 10,
+      "exit": "idle_autosave",
+      "click_latency_ms_p95": 4.2,
+      "frame_p95_ms": 16.8
+    }
+  ],
+  "passed": true
+}
